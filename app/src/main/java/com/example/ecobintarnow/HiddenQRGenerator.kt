@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ecobintarnow.R
+import com.example.ecobintarnow.databinding.ActivityHiddenQrgeneratorBinding
 import com.example.ecobintarnow.databinding.ActivityMainBinding
 import com.example.ecobintarnow.databinding.ActivityQrBinding
 import com.example.testapp.DatabaseRow
@@ -22,15 +23,15 @@ import java.lang.System.currentTimeMillis
 class HiddenQRGenerator: AppCompatActivity()
 {
     private lateinit var myRef: DatabaseReference
-    private lateinit var binding: ActivityQrBinding
+    private lateinit var binding: ActivityHiddenQrgeneratorBinding
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        binding = ActivityQrBinding.inflate(layoutInflater)
+        binding = ActivityHiddenQrgeneratorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val btnGenerateQRCode = binding.btnBack
+        val btnGenerateQRCode = binding.btnGenerateQRCode
 
 
 
