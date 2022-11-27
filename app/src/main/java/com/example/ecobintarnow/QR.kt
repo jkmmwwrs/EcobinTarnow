@@ -17,6 +17,7 @@ import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
 
+
 class QR : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     private lateinit var codeScanner: CodeScanner
@@ -24,7 +25,9 @@ class QR : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var myRef: DatabaseReference
+    private lateinit var myref2: DatabaseReference
     val mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+
 
 
 
@@ -75,56 +78,45 @@ class QR : AppCompatActivity() {
                 val FBInput = DatabaseRow(userID, email, points)
 
                 myRef = firebase.getReference("Users")
-                myRef.child(userID).setValue(FBInput)
+                myref2 = firebase.getReference("QRCode")
+
 
 
                 val xDatabase = FirebaseDatabase.getInstance().getReference("QRCodes");
 
                 xDatabase.get().addOnSuccessListener {
                     val test = it.child(kodZ).value.toString()
-                    Toast.makeText(
-                        applicationContext, test,
-                        Toast.LENGTH_LONG
-                    ).show()
+
+                    if (test != "null") {
+                        myRef.child(userID).setValue(FBInput)
+
+                        firebase.getReference("QRCodes").child(kodZ).removeValue().addOnSuccessListener {
+                            Toast.makeText(
+                                this, "Udało się usunąć",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }.addOnCanceledListener {
+                            Toast.makeText(
+                                this, "Nie udało się usunąć",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+
+
+                        val explicitIntent = Intent(applicationContext, SecondActivity::class.java)
+                        explicitIntent.putExtra("QR_DATA", kodZ)
+                        startActivity(explicitIntent)
+                    } else {
+                        Toast.makeText(
+                            this, "Nieprawidłowy kod",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+
+                    //xDatabase.removeValue()
                 }
 
 
-//                val rootRef = FirebaseDatabase.getInstance().getReference("QRCode")
-//                rootRef.addListenerForSingleValueEvent(object : ValueEventListener {
-//                    override fun onDataChange(snapshot: DataSnapshot) {
-//                        if (snapshot.hasChild("88881623")) {
-//                            Toast.makeText(
-//                                applicationContext, "Success",
-//                                Toast.LENGTH_LONG
-//                            ).show()
-//                        }
-//                        else{
-//                            Toast.makeText(
-//                                applicationContext, "Błąd w sukcesie",
-//                                Toast.LENGTH_LONG
-//                            ).show()
-//                        }
-//
-//                    }
-
-//                val testdb = FirebaseDatabase.getInstance().getReference("QRCode")
-//                val test = testdb.child("QRCode")
-
-//                    override fun onCancelled(error: DatabaseError) {
-//                        Toast.makeText(
-//                            applicationContext, "Błąd",
-//                            Toast.LENGTH_LONG
-//                        ).show()
-//                    }
-//                })
-
-
-
-
-
-                val explicitIntent = Intent(applicationContext, SecondActivity::class.java)
-                explicitIntent.putExtra("QR_DATA", it.text)
-                startActivity(explicitIntent)
             }
         }
         codeScanner.errorCallback = ErrorCallback {
