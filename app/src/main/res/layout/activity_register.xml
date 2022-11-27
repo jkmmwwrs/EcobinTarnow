@@ -29,7 +29,7 @@
         android:layout_height="88dp" />
 
     <EditText
-        android:id="@+id/textbox"
+        android:id="@+id/inputmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
@@ -52,7 +52,7 @@
         android:layout_height="20dp" />
 
     <EditText
-        android:id="@+id/textbox2"
+        android:id="@+id/inputpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
@@ -73,7 +73,7 @@
         android:layout_height="20dp" />
 
     <EditText
-        android:id="@+id/textbox3"
+        android:id="@+id/inputpass2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
@@ -106,7 +106,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bntregister"
+            android:id="@+id/btnregister"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

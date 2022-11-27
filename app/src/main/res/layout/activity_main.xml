@@ -11,11 +11,11 @@
 
 
     <EditText
-        android:id="@+id/textbox"
+        android:id="@+id/loginmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="@null"
+        android:background="@drawable/textboxshape"
         android:fontFamily="sans-serif"
         android:hint="Wprowadź adres e-mail"
         android:inputType="textEmailAddress"
@@ -28,11 +28,11 @@
         tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/textbox2"
+        android:id="@+id/loginpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="@null"
+        android:background="@drawable/textboxshape"
         android:fontFamily="sans-serif"
         android:inputType="textPassword"
         android:textAlignment="center"
@@ -51,13 +51,13 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bntsend"
+            android:id="@+id/btnlog"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@color/ecogreen"
+            android:background="@drawable/buttonshape"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="Zaloguj się"
@@ -71,13 +71,13 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bntregister"
+            android:id="@+id/btnregister"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@color/ecogreen"
+            android:background="@drawable/buttonshape"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="Zarejestruj się"
