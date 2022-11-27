@@ -41,21 +41,21 @@ class ForumActivity : AppCompatActivity() {
 
 
     private fun getPosts(): List<ForumPosts> = buildList {
-//        mDatabase.get().addOnSuccessListener { it ->
-//            it.children.forEach {
-//               val newPost = ForumPosts(it.child("postAuthor").value.toString(),it.child("postContent").value.toString())
-//                add(newPost)
-//                Log.i("firebase", "${it.child("postAuthor").value}")
-//
-//            }
-//        }.addOnFailureListener{
-//            Log.e("firebase", "Error getting data", it)
-//        }
+        mDatabase.get().addOnSuccessListener { it ->
+            it.children.forEach {
+               val newPost = ForumPosts(it.child("postAuthor").value.toString(),it.child("postContent").value.toString())
+                add(newPost)
+                Log.i("firebase", "${it.child("postContent").value}")
 
-        for (i in 0..5) {
-            val newPost = ForumPosts("$i", "$i")
-            add(newPost)
+            }
+        }.addOnFailureListener{
+            Log.e("firebase", "Error getting data", it)
         }
+
+//        for (i in 0..5) {
+//            val newPost = ForumPosts("$i", "$i")
+//            add(newPost)
+//        }
     }
 }
 

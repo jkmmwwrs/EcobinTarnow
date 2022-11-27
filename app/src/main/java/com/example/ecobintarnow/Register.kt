@@ -82,7 +82,7 @@ class Register : AppCompatActivity() {
 
                 updateUI(user)
             } else {
-                // If sign in fails, display a message to the user.
+
                 Log.w(TAG, "createUserWithEmail:failure", task.exception)
                 Toast.makeText(
                     baseContext, "Błąd danych, możliwe że istnieje już konto powiązane z tymi danymi.",
@@ -91,7 +91,7 @@ class Register : AppCompatActivity() {
                 updateUI(null)
             }
         }
-        // [END create_user_with_email]
+
     }
 
     private fun updateUI(user: FirebaseUser?) {
