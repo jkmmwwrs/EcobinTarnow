@@ -9,11 +9,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="53dp"
         android:layout_marginBottom="650dp"
-        android:background="@drawable/buttonshape"
-        android:text="Wróć"
+        android:background="@color/ecogreen"
+        android:text="Anuluj"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <com.budiyev.android.codescanner.CodeScannerView
             android:id="@+id/scanner_view"
             android:layout_width="match_parent"
@@ -34,17 +35,17 @@
         </com.budiyev.android.codescanner.CodeScannerView>
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Zczytany kod: "
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
-        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout"
-        android:layout_marginBottom="30dp"
-        android:textColor="#fff"
-        />
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Zczytany kod: "-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/frameLayout"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/frameLayout"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:textColor="#fff"-->
+<!--        />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
