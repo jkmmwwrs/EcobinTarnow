@@ -34,8 +34,6 @@ class SecondActivity : AppCompatActivity() {
         mDatabase.child(auth.currentUser?.uid.toString()).get().addOnSuccessListener {
             point = it.child("points").value.toString()
             binding.points.text = point
-
-
         }
 
         binding.buttonmap.setOnClickListener {
@@ -61,7 +59,11 @@ class SecondActivity : AppCompatActivity() {
             startActivity(eIntentToQR)
 
         }
+        binding.buttonforum.setOnClickListener{
+            val eIntentToForum = Intent(applicationContext, ForumActivity::class.java)
+            startActivity(eIntentToForum)
 
+        }
 
         /*if(intent.hasExtra("PASS_DATA")){
             binding.textbox3.text = intent.getStringExtra("PASS_DATA")

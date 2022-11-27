@@ -6,7 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import com.example.ecobintarnow.databinding.ActivityRegisterBinding
-import com.example.testapp.DatabaseRow
+import com.example.ecobintarnow.DatabaseRow
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth

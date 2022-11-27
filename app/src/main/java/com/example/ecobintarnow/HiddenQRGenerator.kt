@@ -13,7 +13,7 @@ import com.example.ecobintarnow.R
 import com.example.ecobintarnow.databinding.ActivityHiddenQrgeneratorBinding
 import com.example.ecobintarnow.databinding.ActivityMainBinding
 import com.example.ecobintarnow.databinding.ActivityQrBinding
-import com.example.testapp.DatabaseRow
+import com.example.ecobintarnow.DatabaseRow
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.zxing.BarcodeFormat
@@ -54,7 +54,7 @@ class HiddenQRGenerator: AppCompatActivity()
 
             myRef = firebase.getReference("QRCodes")
 
-            myRef.child(currentTimeMillis().toString()).setValue(FBInput)
+            myRef.child(FBInput).setValue(FBInput)
         }
     }
 }

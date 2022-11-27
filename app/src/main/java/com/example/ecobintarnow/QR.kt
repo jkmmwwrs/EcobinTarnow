@@ -5,18 +5,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.View.inflate
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.budiyev.android.codescanner.*
 import com.example.ecobintarnow.R.*
 import com.example.ecobintarnow.databinding.ActivityQrBinding
-import com.example.testapp.DatabaseRow
+import com.example.ecobintarnow.DatabaseRow
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
+
 
 class QR : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -26,6 +25,7 @@ class QR : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var myRef: DatabaseReference
     val mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+    val xDatabase = FirebaseDatabase.getInstance().getReference("QRCode");
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,10 +67,9 @@ class QR : AppCompatActivity() {
                 val email = auth.currentUser?.email.toString()
                 val kodZ = it.text.toString()
 
-//                if(intent.hasExtra("PKT_DATA")){
-//                    val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
-//                }
                 val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(kodZ[7].code)
+
+
                 val firebase = FirebaseDatabase.getInstance()
 
                 val FBInput = DatabaseRow(userID, email, points)
@@ -79,11 +78,45 @@ class QR : AppCompatActivity() {
                 myRef.child(userID).setValue(FBInput)
 
 
+                xDatabase.child(kodZ).get().addOnSuccessListener {
+                    val test = it.toString()
+                    Toast.makeText(
+                        applicationContext, test,
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
 
-                Toast.makeText(
-                    this, "Test: ${kodZ[7]}",
-                    Toast.LENGTH_LONG
-                ).show()
+
+//                val rootRef = FirebaseDatabase.getInstance().getReference("QRCode")
+//                rootRef.addListenerForSingleValueEvent(object : ValueEventListener {
+//                    override fun onDataChange(snapshot: DataSnapshot) {
+//                        if (snapshot.hasChild("88881623")) {
+//                            Toast.makeText(
+//                                applicationContext, "Success",
+//                                Toast.LENGTH_LONG
+//                            ).show()
+//                        }
+//                        else{
+//                            Toast.makeText(
+//                                applicationContext, "Błąd w sukcesie",
+//                                Toast.LENGTH_LONG
+//                            ).show()
+//                        }
+//
+//                    }
+
+//                val testdb = FirebaseDatabase.getInstance().getReference("QRCode")
+//                val test = testdb.child("QRCode")
+
+//                    override fun onCancelled(error: DatabaseError) {
+//                        Toast.makeText(
+//                            applicationContext, "Błąd",
+//                            Toast.LENGTH_LONG
+//                        ).show()
+//                    }
+//                })
+
+
 
 
 
