@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,24 +8,75 @@
     android:orientation="vertical"
     tools:context=".SecondActivity">
 
-
     <TextView
         android:id="@+id/textbox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:visibility="gone"/>
 
-    <Space
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="125dp" />
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:background="@color/white2">
 
-    <TextView
-        android:id="@+id/points"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="@color/ecogreen"
-        android:textSize="70dp" />
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/gora"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+       >
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/logoeb"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/ecogreen"
+            android:textSize="70sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+        </Space>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -102,8 +153,8 @@
                         <androidx.appcompat.widget.AppCompatButton
 
                             android:id="@+id/button2"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:background="@drawable/kodqr"
                             android:text=""
                             android:textColor="@color/white" />
@@ -169,7 +220,7 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+</RelativeLayout>
 
-</LinearLayout>
 
 
