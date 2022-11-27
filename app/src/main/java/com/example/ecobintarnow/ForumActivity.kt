@@ -12,40 +12,49 @@ import com.google.firebase.ktx.Firebase
 
 class ForumActivity : AppCompatActivity() {
     private lateinit var binding: ActivityForumBinding
-    private lateinit var database : DatabaseReference
+    //private lateinit var database: DatabaseReference
     private lateinit var auth: FirebaseAuth
 
-    val mDatabase = FirebaseDatabase.getInstance().getReference("Posts")
+    //val mDatabase = FirebaseDatabase.getInstance().getReference("Posts")
 
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityForumBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-        val postListener = object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val post = dataSnapshot.getValue()
-                val adapter = ForumAdapter(post as List<ForumPosts>)
-                binding.forumRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
-                binding.forumRecyclerView.adapter = adapter
-
-            }
-            override fun onCancelled(databaseError: DatabaseError) {
-                Log.w(TAG, "loadPost:onCancelled", databaseError.toException())
-            }
-
-        }
-        database.addValueEventListener(postListener)
-
-        binding.forumButton.setOnClickListener {
-            val postContent = binding.forumEditText.text.toString()
-            val postAuthor = auth.currentUser?.email.toString()
-            val postData = ForumPosts(postAuthor,postContent)
-            mDatabase.child("Posts").setValue(postData)
+        val adapter = ForumAdapter(showRecycleView())
+        binding.forumRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
+        binding.forumRecyclerView.adapter = adapter
+//        val postListener = object : ValueEventListener {
+//            override fun onDataChange(dataSnapshot: DataSnapshot) {
+//                val post = dataSnapshot.getValue()
+//                val adapter = ForumAdapter(post as List<ForumPosts>)
+//                binding.forumRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
+//                binding.forumRecyclerView.adapter = adapter
+//
+//            }
+//            override fun onCancelled(databaseError: DatabaseError) {
+//                Log.w(TAG, "loadPost:onCancelled", databaseError.toException())
+//            }
+//
+//        }
+//        database.addValueEventListener(postListener)
+//
+//        binding.forumButton.setOnClickListener {
+//            val postContent = binding.forumEditText.text.toString()
+//            val postAuthor = auth.currentUser?.email.toString()
+//            val postData = ForumPosts(postAuthor,postContent)
+//            mDatabase.child("Posts").setValue(postData)
+//        }
+//    }
+//        companion object {
+//            private const val TAG = "ForumActivity"
+//        }
+    }
+    private fun showRecycleView() : List<ForumPosts> = buildList {
+        for (i  in 0..5){
+            val newPost = ForumPosts("$i","$i")
         }
     }
-    companion object {
-        private const val TAG = "ForumActivity"
-    }
+
 }
