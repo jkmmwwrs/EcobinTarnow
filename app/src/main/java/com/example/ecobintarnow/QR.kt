@@ -25,7 +25,7 @@ class QR : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var myRef: DatabaseReference
     val mDatabase = FirebaseDatabase.getInstance().getReference("Users");
-    val xDatabase = FirebaseDatabase.getInstance().getReference("QRCode");
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,8 +78,10 @@ class QR : AppCompatActivity() {
                 myRef.child(userID).setValue(FBInput)
 
 
-                xDatabase.child(kodZ).get().addOnSuccessListener {
-                    val test = it.toString()
+                val xDatabase = FirebaseDatabase.getInstance().getReference("QRCodes");
+
+                xDatabase.get().addOnSuccessListener {
+                    val test = it.child(kodZ).value.toString()
                     Toast.makeText(
                         applicationContext, test,
                         Toast.LENGTH_LONG
