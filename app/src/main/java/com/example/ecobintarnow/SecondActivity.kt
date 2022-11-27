@@ -59,7 +59,11 @@ class SecondActivity : AppCompatActivity() {
             startActivity(eIntentToQR)
 
         }
+        binding.buttonforum.setOnClickListener{
+            val eIntentToForum = Intent(applicationContext, ForumActivity::class.java)
+            startActivity(eIntentToForum)
 
+        }
 
         /*if(intent.hasExtra("PASS_DATA")){
             binding.textbox3.text = intent.getStringExtra("PASS_DATA")
