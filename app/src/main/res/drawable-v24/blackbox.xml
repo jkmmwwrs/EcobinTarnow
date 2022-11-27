@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle"
-    android:useLevel="false"
-    >
-    <size
-        android:width="300dp"
-        android:height="170dp">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="292dp"
+    android:height="172dp"
+    android:viewportWidth="292"
+    android:viewportHeight="172">
 
-    </size>
-    <corners
-        android:topLeftRadius="25dp"
-        android:topRightRadius="25dp"/>
-    <gradient
-        android:type="linear"
-        android:angle="90"
-        android:startColor="@color/darkerblue"
-        android:endColor="@color/darkblue" />
+    <path
+        android:strokeWidth="1.5"
+        android:strokeMiterLimit="10"
+        android:pathData="M 57.046 96.615 L 16.416 150.396 L 271.534 150.396 L 186.495 22.836 L 37.676 22.836 L 27.046 86.615 Z" />
 
-</shape>
+    <path
+        android:fillColor="@color/lightergray"
+        android:strokeWidth="1.5"
+        android:strokeMiterLimit="10"
+        android:pathData="M 86.046 23.615 L 13.416 150.396 L 271.534 150.396 L 186.495 23.615 L 107.676 51.836 L 188.046 23.615 Z " />
+</vector>
+

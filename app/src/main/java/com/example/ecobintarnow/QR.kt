@@ -32,6 +32,7 @@ class QR : AppCompatActivity() {
         binding = ActivityQrBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val btnBack = binding.btnBack
 //        val textField = binding.textView
 
