@@ -34,8 +34,6 @@ class SecondActivity : AppCompatActivity() {
         mDatabase.child(auth.currentUser?.uid.toString()).get().addOnSuccessListener {
             point = it.child("points").value.toString()
             binding.points.text = point
-
-
         }
 
         binding.buttonmap.setOnClickListener {
