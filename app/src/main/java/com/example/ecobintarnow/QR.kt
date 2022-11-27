@@ -3,6 +3,7 @@ package com.example.ecobintarnow
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.inflate
 import android.widget.Toast
@@ -32,10 +33,19 @@ class QR : AppCompatActivity() {
         binding = ActivityQrBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val btnBack = binding.btnBack
+        val btnGen = binding.btnGen
 //        val textField = binding.textView
 
-        btnBack.setOnClickListener(View.OnClickListener { startActivity(Intent(this, SecondActivity::class.java)) })
+        btnBack.setOnClickListener{
+            startActivity(Intent(applicationContext, SecondActivity::class.java))
+        }
+
+        btnGen.setOnClickListener{
+            Log.e("CHANGE", "YES")
+            startActivity(Intent(applicationContext, HiddenQRGenerator::class.java))
+        }
 
         val scannerView = binding.scannerView
 
@@ -50,21 +60,30 @@ class QR : AppCompatActivity() {
         auth = Firebase.auth
 
 
+
         codeScanner.decodeCallback = DecodeCallback {
             runOnUiThread {
                 val userID = auth.currentUser?.uid.toString()
                 val email = auth.currentUser?.email.toString()
+                val kodZ = it.text.toString()
 
 //                if(intent.hasExtra("PKT_DATA")){
 //                    val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
 //                }
-                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
+                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(kodZ[7].code)
                 val firebase = FirebaseDatabase.getInstance()
 
                 val FBInput = DatabaseRow(userID, email, points)
 
-                myRef = firebase.getReference("ArrayData")
+                myRef = firebase.getReference("Users")
                 myRef.child(userID).setValue(FBInput)
+
+
+
+                Toast.makeText(
+                    this, "Test: ${kodZ[7]}",
+                    Toast.LENGTH_LONG
+                ).show()
 
 
 
@@ -84,6 +103,11 @@ class QR : AppCompatActivity() {
 
         scannerView.setOnClickListener {
             codeScanner.startPreview()
+        }
+
+
+        if(auth.currentUser?.uid == "X6C6xHu2HGVXV6iiGQUNqCXG9Q32"){
+            binding.btnGen.visibility = View.VISIBLE
         }
     }
 
