@@ -5,7 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.ecobintarnow'
-    compileSdk 32
+    compileSdk 33
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
 
     defaultConfig {
         applicationId "com.example.ecobintarnow"

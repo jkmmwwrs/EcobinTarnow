@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_laout"
@@ -10,29 +13,50 @@
     android:orientation="vertical">
 
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logo"
+        android:textAlignment="center"
+        android:textColor="@color/ecogreen"
+        android:textSize="60dp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="88dp" />
+
     <EditText
         android:id="@+id/textbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="@null"
+        android:background="@color/ecogreen"
         android:fontFamily="sans-serif"
-        android:hint="Wprowadź adres e-mail"
-        android:inputType="textEmailAddress"
-        android:singleLine="true"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:hint="Wprowadź adres e-mail"
         android:textColor="@color/gray"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
         tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <EditText
         android:id="@+id/textbox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="@null"
+        android:background="@color/ecogreen"
         android:fontFamily="sans-serif"
         android:inputType="textPassword"
         android:textAlignment="center"
@@ -44,30 +68,41 @@
         android:hint="Wprowadź hasło"
         tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:id="@+id/textbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/ecogreen"
+        android:fontFamily="sans-serif"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/gray"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:hint="Powtórz hasło"
+        tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="38dp" />
+
     <LinearLayout
         android:id="@+id/child_layout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bntsend"
-            style="@style/Widget.AppCompat.Button"
+
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@color/ecogreen"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="Zaloguj się"
-            android:textColor="@color/gray"
-            android:textSize="16sp"
-            android:textStyle="bold"
-
-            tools:ignore="TextContrastCheck" />
-
-
+            android:layout_height="15dp" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -86,4 +121,5 @@
             android:textStyle="bold"
             tools:ignore="TextContrastCheck" />
     </LinearLayout>
+
 </LinearLayout>
