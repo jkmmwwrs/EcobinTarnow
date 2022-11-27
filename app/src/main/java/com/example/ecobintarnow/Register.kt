@@ -74,7 +74,7 @@ class Register : AppCompatActivity() {
                 val firebase = FirebaseDatabase.getInstance()
                 val FBInput = DatabaseRow(userID, email, 0)
 
-                myRef = firebase.getReference("ArrayData")
+                myRef = firebase.getReference("Users")
 
                 myRef.child(userID).setValue(FBInput)
 

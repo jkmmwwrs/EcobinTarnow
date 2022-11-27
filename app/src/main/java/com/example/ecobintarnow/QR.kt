@@ -54,17 +54,25 @@ class QR : AppCompatActivity() {
             runOnUiThread {
                 val userID = auth.currentUser?.uid.toString()
                 val email = auth.currentUser?.email.toString()
+                val kodZ = it.text.toString()
 
 //                if(intent.hasExtra("PKT_DATA")){
 //                    val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
 //                }
-                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
+                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(kodZ[7])
                 val firebase = FirebaseDatabase.getInstance()
 
                 val FBInput = DatabaseRow(userID, email, points)
 
-                myRef = firebase.getReference("ArrayData")
+                myRef = firebase.getReference("Users")
                 myRef.child(userID).setValue(FBInput)
+
+
+
+                Toast.makeText(
+                    this, "Test: ${kodZ[7]}",
+                    Toast.LENGTH_LONG
+                ).show()
 
 
 
