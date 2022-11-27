@@ -24,7 +24,7 @@ class QR : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var myRef: DatabaseReference
-    val mDatabase = FirebaseDatabase.getInstance().getReference("ArrayData");
+    val mDatabase = FirebaseDatabase.getInstance().getReference("Users");
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,19 +52,21 @@ class QR : AppCompatActivity() {
 
         codeScanner.decodeCallback = DecodeCallback {
             runOnUiThread {
-                //Toast.makeText(this, "Scan result: ${it.text}", Toast.LENGTH_LONG).show()
                 val userID = auth.currentUser?.uid.toString()
                 val email = auth.currentUser?.email.toString()
 
+//                if(intent.hasExtra("PKT_DATA")){
+//                    val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
+//                }
                 val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
                 val firebase = FirebaseDatabase.getInstance()
+
                 val FBInput = DatabaseRow(userID, email, points)
 
                 myRef = firebase.getReference("ArrayData")
                 myRef.child(userID).setValue(FBInput)
 
 
-//                textField.text = "Zczytany kod: ${it.text}"
 
                 val explicitIntent = Intent(applicationContext, SecondActivity::class.java)
                 explicitIntent.putExtra("QR_DATA", it.text)
