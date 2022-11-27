@@ -1,4 +1,4 @@
-package com.example.testapp
+package com.example.ecobintarnow
 
 data class DatabaseRow(
     val userID: String,

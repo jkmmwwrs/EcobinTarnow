@@ -14,6 +14,7 @@ class ForumActivity : AppCompatActivity() {
     private lateinit var binding: ActivityForumBinding
     private lateinit var database : DatabaseReference
     private lateinit var auth: FirebaseAuth
+
     val mDatabase = FirebaseDatabase.getInstance().getReference("Posts")
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -22,10 +23,8 @@ class ForumActivity : AppCompatActivity() {
         binding = ActivityForumBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-
                 val post = dataSnapshot.getValue()
                 val adapter = ForumAdapter(post as List<ForumPosts>)
                 binding.forumRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
@@ -37,14 +36,13 @@ class ForumActivity : AppCompatActivity() {
             }
 
         }
-        mDatabase.addValueEventListener(postListener)
-
+        database.addValueEventListener(postListener)
 
         binding.forumButton.setOnClickListener {
             val postContent = binding.forumEditText.text.toString()
             val postAuthor = auth.currentUser?.email.toString()
             val postData = ForumPosts(postAuthor,postContent)
-            database.child("Posts").setValue(postData)
+            mDatabase.child("Posts").setValue(postData)
         }
     }
     companion object {
