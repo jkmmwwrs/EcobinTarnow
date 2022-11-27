@@ -79,7 +79,7 @@ class QR : AppCompatActivity() {
 
 
                 xDatabase.child(kodZ).get().addOnSuccessListener {
-                    val test = it.child(kodZ).toString()
+                    val test = it.toString()
                     Toast.makeText(
                         applicationContext, test,
                         Toast.LENGTH_LONG
