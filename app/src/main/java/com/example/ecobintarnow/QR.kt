@@ -3,6 +3,7 @@ package com.example.ecobintarnow
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.inflate
 import android.widget.Toast
@@ -34,9 +35,12 @@ class QR : AppCompatActivity() {
 
 
         val btnBack = binding.btnBack
+        val btnGen = binding.btnGen
 //        val textField = binding.textView
 
-        btnBack.setOnClickListener(View.OnClickListener { startActivity(Intent(this, SecondActivity::class.java)) })
+        btnBack.setOnClickListener(View.OnClickListener { startActivity(Intent(applicationContext, SecondActivity::class.java)) })
+
+        btnGen.setOnClickListener(View.OnClickListener { startActivity(Intent(applicationContext, HiddenQRGenerator::class.java)) })
 
         val scannerView = binding.scannerView
 
@@ -49,6 +53,7 @@ class QR : AppCompatActivity() {
         codeScanner.isFlashEnabled = false
 
         auth = Firebase.auth
+
 
 
         codeScanner.decodeCallback = DecodeCallback {
@@ -93,6 +98,11 @@ class QR : AppCompatActivity() {
 
         scannerView.setOnClickListener {
             codeScanner.startPreview()
+        }
+
+
+        if(auth.currentUser?.uid == "X6C6xHu2HGVXV6iiGQUNqCXG9Q32"){
+            binding.btnGen.visibility = View.VISIBLE
         }
     }
 
