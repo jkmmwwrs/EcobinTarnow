@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "699023955395",
+    "project_id": "ecobin-b1a67",
+    "storage_bucket": "ecobin-b1a67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699023955395:android:29a564157eea1bd8ecd976",
+        "android_client_info": {
+          "package_name": "com.example.ecobintarnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699023955395-930rqih2i81pmlr61b2cvoisjtv5tfi2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq04Lug_grC3SJpRw32wr34vy3S_eMfsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699023955395-930rqih2i81pmlr61b2cvoisjtv5tfi2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
