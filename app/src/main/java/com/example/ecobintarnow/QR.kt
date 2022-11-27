@@ -59,7 +59,7 @@ class QR : AppCompatActivity() {
 //                if(intent.hasExtra("PKT_DATA")){
 //                    val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(5)
 //                }
-                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(kodZ[7])
+                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(kodZ[7].code)
                 val firebase = FirebaseDatabase.getInstance()
 
                 val FBInput = DatabaseRow(userID, email, points)
