@@ -38,9 +38,14 @@ class QR : AppCompatActivity() {
         val btnGen = binding.btnGen
 //        val textField = binding.textView
 
-        btnBack.setOnClickListener(View.OnClickListener { startActivity(Intent(applicationContext, SecondActivity::class.java)) })
+        btnBack.setOnClickListener{
+            startActivity(Intent(applicationContext, SecondActivity::class.java))
+        }
 
-        btnGen.setOnClickListener(View.OnClickListener { startActivity(Intent(applicationContext, HiddenQRGenerator::class.java)) })
+        btnGen.setOnClickListener{
+            Log.e("CHANGE", "YES")
+            startActivity(Intent(applicationContext, HiddenQRGenerator::class.java))
+        }
 
         val scannerView = binding.scannerView
 

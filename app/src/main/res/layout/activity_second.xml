@@ -41,8 +41,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="@drawable/blackbox"
+                android:layout_height="140dp"
+                android:background="@drawable/do_ikon"
                 android:gravity="bottom"
                 android:orientation="vertical">
 
@@ -52,34 +52,101 @@
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
-                    <androidx.appcompat.widget.AppCompatButton
-
-                        android:id="@+id/button2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/buttonshape"
-                        android:text="Zeskanuj kod QR"
-                        android:textColor="@color/white" />
-
-                    <Space
-                        android:layout_width="20dp"
+                    <TableRow
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="0" />
+                        android:gravity="bottom">
 
-                    <androidx.appcompat.widget.AppCompatButton
+                        <Space
+                            android:layout_width="7dp"
+                            android:layout_height="wrap_content" />
 
-                        android:id="@+id/buttonmap"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/buttonshape"
-                        android:text="Otwórz mapę"
-                        android:textColor="@color/white" />
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/buttonmap"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/mapa_ikona_"
+                                android:text=""
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="65dp"
+                            android:layout_height="80dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/buttonforum"
+                                android:layout_width="50dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/forum"
+                                android:text=""
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="55dp"
+                            android:layout_height="50dp" />
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/button2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/kodqr"
+                                android:text=""
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="40dp"
+                            android:layout_height="50dp" />
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <androidx.appcompat.widget.AppCompatButton
+
+                                android:id="@+id/button"
+                                android:layout_width="35dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/konto_ikona_eb"
+                                android:text=""
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+
+                        <Space
+                            android:layout_width="20dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0" />
+
+
+                    </TableRow>
 
                 </LinearLayout>
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -88,20 +155,7 @@
                     android:orientation="horizontal">
 
 
-                    <androidx.appcompat.widget.AppCompatButton
-
-                        android:id="@+id/button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/buttonshape"
-                        android:text="Wyloguj się"
-                        android:textColor="@color/white" />
                 </LinearLayout>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="22dp" />
-
 
             </LinearLayout>
         </LinearLayout>
