@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".SecondActivity"
+    tools:context=".InfoActivity"
     >
 
     <TextView
@@ -22,257 +22,153 @@
         android:layout_height="match_parent"
         android:layout_weight="0"
         android:background="@color/gray2"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center_horizontal">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="100dp" />
-
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" />
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:gravity="center">
 
-                    <LinearLayout
-                        android:layout_width="352dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
+                    <TextView
+                        android:id="@+id/points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/ecogreen"
+                        android:textSize="120sp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="360dp"
+                        android:layout_height="250dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="0"
                         android:background="@drawable/bobux"
                         android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="35dp"
-                            android:layout_weight="0"
-                            android:text="Opcja 1\n2000 punktów"
-                            android:textColor="@color/white"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_weight="0"
-                            app:srcCompat="@drawable/granat" />
-
-
-                    </LinearLayout>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
+                        android:text="To jest liczba twoich punktów! Punkty zdobyrwasz za skanowanie kodów po wyrzuceniu śmieci w naszych koszach! Punkty wymieniaj na bonusy i zmieniaj świat na lepsze!"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="25dp" />
 
                     <LinearLayout
-                        android:layout_width="220dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
+                        android:layout_width="360dp"
+                        android:layout_height="250dp"
                         android:background="@drawable/vbux"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:id="@+id/imageView1"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_weight="0"
-                            app:srcCompat="@drawable/bialy_gosc" />
+                        android:layout_marginBottom="20dp">
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/textView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
                             android:layout_weight="0"
-                            android:gravity="right"
-                            android:text="Opcja 2\n2500 punktów"
+                            android:gravity="center"
+                            android:text="W naszej mapce znajdziesz specjalne kosze blisko Ciebie"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <LinearLayout
-                        android:layout_width="220dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/bobux"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="35dp"
-                            android:layout_weight="0"
-                            android:text="Opcja 3\n3000 punktów"
-                            android:textColor="@color/white"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
+                            android:textSize="25dp" />
                         <ImageView
-                            android:id="@+id/imageView2"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_weight="0"
-                            app:srcCompat="@drawable/granat" />
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/mapa_ikona_"/>
                     </LinearLayout>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
                     <LinearLayout
-                        android:layout_width="220dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
+                        android:layout_width="360dp"
+                        android:layout_height="250dp"
                         android:background="@drawable/vbux"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_weight="0"
-                            app:srcCompat="@drawable/bialy_gosc" />
+                        android:layout_marginBottom="20dp">
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/textView11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="35dp"
                             android:layout_weight="0"
-                            android:gravity="right"
-                            android:text="Opcja 4\n5000 punktów"
+                            android:gravity="center"
+                            android:text="Na naszym forum dowiesz się o ekologicznych zdażeniach w Tarnowie!"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
+                            android:textSize="25dp" />
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/forum"/>
                     </LinearLayout>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
                     <LinearLayout
-                        android:layout_width="220dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/bobux"
+                        android:layout_width="360dp"
+                        android:layout_height="250dp"
+                        android:background="@drawable/vbux"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:layout_marginBottom="20dp">
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/textView12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="35dp"
                             android:layout_weight="0"
-                            android:text="Opcja 5\n7500 punktów"
+                            android:gravity="center"
+                            android:text="Wbudowany czytnik kodów QR pozowli Tobie zbierać punkty odrazu po wyrzuceniu śmieci!"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
+                            android:textSize="25dp" />
                         <ImageView
-                            android:id="@+id/imageView"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_weight="0"
-                            app:srcCompat="@drawable/granat" />
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/kodqr"/>
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="360dp"
+                        android:layout_height="250dp"
+                        android:background="@drawable/vbux"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp">
 
-                </TableRow>
-            </TableLayout>
-        </ScrollView>
-        </LinearLayout>
-    </LinearLayout>
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:gravity="center"
+                            android:text="Wymieniaj punkty na bonusy!"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="25dp" />
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/sklepiczek"/>
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="@drawable/gora2"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:orientation="vertical">
+                </LinearLayout>
+            </ScrollView>
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/points"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textColor="@color/ecogreen"
-            android:textSize="60sp" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Space
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:orientation="vertical">
-
-        </Space>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -291,16 +187,13 @@
                 android:layout_height="90dp"
                 android:background="@drawable/dol2"
                 android:gravity="bottom"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
 
                     <LinearLayout
                         android:layout_width="70dp"
@@ -400,24 +293,7 @@
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
-                    <Space
-                        android:layout_width="20dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="0" />
-
-
                 </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
-
-
-                </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

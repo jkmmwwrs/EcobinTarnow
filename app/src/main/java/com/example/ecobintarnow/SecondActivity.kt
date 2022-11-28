@@ -62,9 +62,9 @@ class SecondActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
             binding.points.text = point
         }
 
-        binding.buttonmap.setOnClickListener {
-//            val eIntentToMap = Intent(applicationContext, MapsActivity::class.java)
-//            startActivity(eIntentToMap)
+        binding.buttonsearch.setOnClickListener {
+            val eIntentToInfo = Intent(applicationContext, InfoActivity::class.java)
+            startActivity(eIntentToInfo)
         }
 
         if(intent.hasExtra("LOGIN_DATA")){
