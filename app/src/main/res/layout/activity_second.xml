@@ -44,7 +44,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:background="@drawable/logoeb"
             android:orientation="vertical">
 
         </LinearLayout>
@@ -107,7 +106,7 @@
                         android:layout_height="wrap_content" />
 
                     <LinearLayout
-                        android:layout_width="60dp"
+                        android:layout_width="70dp"
                         android:layout_height="85dp"
                         android:gravity="center"
                         android:orientation="vertical">
@@ -115,9 +114,60 @@
                         <androidx.appcompat.widget.AppCompatButton
 
                             android:id="@+id/buttonmap"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/mapa_ikona_"
+                            android:text=""
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="85dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:id="@+id/buttonforum"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/forum"
+                            android:text=""
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:id="@+id/button2"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:background="@drawable/mapa_ikona_"
+                            android:background="@drawable/kodqr"
+                            android:text=""
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="85dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:id="@+id/buttonshop"
+                            android:layout_width="50dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/sklepiczek"
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
@@ -130,42 +180,13 @@
 
                         <androidx.appcompat.widget.AppCompatButton
 
-                            android:id="@+id/buttonforum"
-                            android:layout_width="45dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/forum"
+                            android:id="@+id/button"
+                            android:layout_width="30dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/wyjscie"
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
-
-
-                    <Space
-                        android:layout_width="27dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0" />
-
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="90dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.AppCompatButton
-
-                            android:id="@+id/button2"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:background="@drawable/kodqr"
-                            android:text=""
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-
-
-                    <Space
-                        android:layout_width="23dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0" />
-
                     <LinearLayout
                         android:layout_width="60dp"
                         android:layout_height="85dp"
@@ -174,30 +195,13 @@
 
                         <androidx.appcompat.widget.AppCompatButton
 
-                            android:id="@+id/buttonshop"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/sklepiczek"
+                            android:id="@+id/buttonsearch"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/lupa"
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="90dp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.AppCompatButton
-
-                            android:id="@+id/button"
-                            android:layout_width="35dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/konto_ikona_eb"
-                            android:text=""
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-
 
                     <Space
                         android:layout_width="20dp"
