@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-
         binding.btnregister.setOnClickListener {
             val explicitIntent = Intent(applicationContext, Register::class.java)
             startActivity(explicitIntent)

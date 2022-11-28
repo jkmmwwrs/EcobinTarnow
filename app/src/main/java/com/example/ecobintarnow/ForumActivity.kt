@@ -1,5 +1,6 @@
 package com.example.ecobintarnow
 
+import android.graphics.drawable.Drawable
 import com.example.ecobintarnow.databinding.ActivityForumBinding
 import android.os.Bundle
 import android.util.Log

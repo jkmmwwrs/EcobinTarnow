@@ -18,30 +18,44 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        <EditText
-            android:id="@+id/forumEditTextTopic"
-            android:hint="Temat"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/postbox"
+            android:layout_width="380dp"
+            android:layout_marginLeft="6dp"
             android:layout_height="wrap_content"
-            android:visibility="gone"></EditText>
+            android:orientation="vertical"
+            android:background="@drawable/postbox"
+            android:visibility="visible">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/showbutton"
+                android:layout_marginTop="10dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/plus"
+                android:text=""
+                android:visibility="visible" />
 
-    <EditText
-        android:id="@+id/forumEditText"
-        android:hint="Napisz post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"></EditText>
+            <EditText
+                android:id="@+id/forumEditTextTopic"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Temat"
+                android:textColorHint="@color/white2"
+                android:textColor="@color/white"
+                android:visibility="gone" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/showbutton"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/buttonshape"
-            android:text=""
-            android:visibility="visible" />
+            <EditText
+                android:id="@+id/forumEditText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:hint="Napisz post"
+                android:textColorHint="@color/white2"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
 
         <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/forumButton"
@@ -52,6 +66,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/buttonshape"
         android:visibility="gone"
-        android:text="Zapostuj"></androidx.appcompat.widget.AppCompatButton>
+        android:text="Zapostuj"/>
+        </LinearLayout>
 </LinearLayout>
 </RelativeLayout>
