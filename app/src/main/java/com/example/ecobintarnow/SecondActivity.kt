@@ -90,6 +90,16 @@ class SecondActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
 
         }
 
+        binding.buttonshop.setOnClickListener{
+            val eIntentToShop = Intent(applicationContext, ShopActivity::class.java)
+            startActivity(eIntentToShop)
+
+        }
+        binding.buttonmap.setOnClickListener{
+            val eIntentToMap = Intent(applicationContext, SecondActivity::class.java)
+            startActivity(eIntentToMap)
+
+        }
         /*if(intent.hasExtra("PASS_DATA")){
             binding.textbox3.text = intent.getStringExtra("PASS_DATA")
         }*/
@@ -122,9 +132,9 @@ class SecondActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
         }
     }
     private fun placeMarkerOnMap(currentLatLong: LatLng){
-        val markerOptions = MarkerOptions().position(currentLatLong)
-        markerOptions.title("Tu jesteś!")
-        mMap.addMarker(markerOptions)
+//        val markerOptions = MarkerOptions().position(currentLatLong)
+//        markerOptions.title("Tu jesteś!")
+//        mMap.addMarker(markerOptions)
 
         val zsme = LatLng(50.015327417015165, 20.975568497898742)
         val hackathon = LatLng(50.02369639278428, 20.98445644395501)
