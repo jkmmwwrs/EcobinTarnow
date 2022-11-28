@@ -9,6 +9,16 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logoeb"
+        android:textAlignment="center" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="94dp" />
 
     <EditText
         android:id="@+id/loginmail"
@@ -26,6 +36,10 @@
         android:textSize="22sp"
         android:textStyle="bold"
         tools:ignore="TextContrastCheck,SpeakableTextPresentCheck" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="11dp" />
 
     <EditText
         android:id="@+id/loginpass"
