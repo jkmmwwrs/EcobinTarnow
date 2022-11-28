@@ -1,3 +1,3 @@
 package com.example.ecobintarnow
 
-data class ForumPosts(var postAuthor : String = "", var postContent : String = "")
+data class ForumPosts(var postAuthor : String = "", var postContent : String = "", var postTopic: String = "")

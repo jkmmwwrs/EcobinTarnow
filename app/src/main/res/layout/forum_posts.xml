@@ -4,13 +4,15 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+
+
+
     <TextView
-        android:id="@+id/postAuthor"
-        android:paddingLeft="10dp"
+        android:id="@+id/postTopic"
+        android:background="@drawable/postsshape"
         android:text=""
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/ecogreen"
+        android:padding="10dp"
+        android:textSize="17sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></TextView>
 
@@ -20,6 +22,16 @@
         android:text=""
         android:padding="10dp"
         android:textSize="17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/postAuthor"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/ecogreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></TextView>
 

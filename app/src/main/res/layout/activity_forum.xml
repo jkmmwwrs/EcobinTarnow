@@ -18,6 +18,13 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
+        <EditText
+            android:id="@+id/forumEditTextTopic"
+            android:hint="Temat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></EditText>
+
     <EditText
         android:id="@+id/forumEditText"
         android:hint="Napisz post"

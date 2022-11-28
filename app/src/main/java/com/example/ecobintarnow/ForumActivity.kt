@@ -40,6 +40,7 @@ class ForumActivity : AppCompatActivity() {
 
         binding.showbutton.setOnClickListener {
             binding.forumEditText.visibility = View.VISIBLE
+            binding.forumEditTextTopic.visibility = View.VISIBLE
             binding.forumButton.visibility = View.VISIBLE
             binding.showbutton.visibility = View.GONE
         }
@@ -48,11 +49,13 @@ class ForumActivity : AppCompatActivity() {
             if(binding.forumEditText.text != null) {
                 val postData = ForumPosts(
                     auth.currentUser?.email.toString(),
-                    binding.forumEditText.text.toString()
+                    binding.forumEditText.text.toString(),
+                    binding.forumEditTextTopic.text.toString()
                 )
                 mDatabase.child(System.currentTimeMillis().toString()).setValue(postData)
                 binding.forumEditText.text = null
                 binding.forumEditText.visibility = View.GONE
+                binding.forumEditTextTopic.visibility = View.GONE
                 binding.forumButton.visibility = View.GONE
                 binding.showbutton.visibility = View.VISIBLE
             }
@@ -72,6 +75,7 @@ class ForumActivity : AppCompatActivity() {
               override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists())
                 {
+                    postListArray.clear()
                     for(postSnapshot in snapshot.children)
                     {
                         val post = postSnapshot.getValue(ForumPosts::class.java)

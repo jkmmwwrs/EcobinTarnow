@@ -12,6 +12,7 @@ class ForumAdapter(private val posts: ArrayList<ForumPosts>) : RecyclerView.Adap
     {
         val postAuthor = binding.postAuthor
         val postContent = binding.postContent
+        val postTopic = binding.postTopic
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForumViewHolder {
@@ -23,6 +24,7 @@ class ForumAdapter(private val posts: ArrayList<ForumPosts>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ForumViewHolder, position: Int) {
         holder.postAuthor.text =  posts[position].postAuthor
         holder.postContent.text =  posts[position].postContent
+        holder.postTopic.text =  posts[position].postTopic
     }
 
     override fun getItemCount(): Int {
