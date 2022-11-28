@@ -6,24 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".QR">
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnBack"
         android:layout_width="214dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="650dp"
+        android:layout_marginTop="650dp"
         android:background="@drawable/buttonshape"
         android:text="Anuluj"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnGen"
         android:layout_width="214dp"
         android:layout_height="53dp"
-        android:layout_marginTop="650dp"
+        android:layout_marginBottom="650dp"
         android:background="@drawable/buttonshape"
         android:text="Send"
         android:visibility="gone"
@@ -32,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
@@ -48,17 +50,6 @@
 
     </FrameLayout>
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Zczytany kod: "-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/frameLayout"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/frameLayout"-->
-<!--        android:layout_marginBottom="30dp"-->
-<!--        android:textColor="#fff"-->
-<!--        />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
