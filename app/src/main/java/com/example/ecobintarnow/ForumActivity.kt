@@ -3,6 +3,7 @@ package com.example.ecobintarnow
 import com.example.ecobintarnow.databinding.ActivityForumBinding
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -43,10 +44,31 @@ class ForumActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        binding.forumButton.setOnClickListener {
+        binding.showbutton.setOnClickListener {
+            binding.forumEditText.visibility = View.VISIBLE
+            binding.forumButton.visibility = View.VISIBLE
+            binding.showbutton.visibility = View.GONE
+        }
 
-            val postData = ForumPosts(auth.currentUser?.email.toString(), binding.forumEditText.text.toString())
-            mDatabase.child(System.currentTimeMillis().toString()).setValue(postData)
+        binding.forumButton.setOnClickListener {
+            if(binding.forumEditText.text != null) {
+                val postData = ForumPosts(
+                    auth.currentUser?.email.toString(),
+                    binding.forumEditText.text.toString()
+                )
+                mDatabase.child(System.currentTimeMillis().toString()).setValue(postData)
+                binding.forumEditText.text = null
+                binding.forumEditText.visibility = View.GONE
+                binding.forumButton.visibility = View.GONE
+                binding.showbutton.visibility = View.VISIBLE
+            }
+            else
+            {
+                Toast.makeText(
+                    this, "Wprowadź wiadomość",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 
