@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.ecobintarnow.databinding.ForumPostsBinding
 
-class ForumAdapter(private val posts: List<ForumPosts>) : RecyclerView.Adapter<ForumAdapter.ForumViewHolder>()
+class ForumAdapter(private val posts: ArrayList<ForumPosts>) : RecyclerView.Adapter<ForumAdapter.ForumViewHolder>()
 {
     inner class ForumViewHolder(binding: ForumPostsBinding) : ViewHolder(binding.root)
     {
