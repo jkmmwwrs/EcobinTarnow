@@ -43,8 +43,10 @@ class ForumActivity : AppCompatActivity() {
     private fun getPosts(): List<ForumPosts> = buildList {
         mDatabase.get().addOnSuccessListener { it ->
             it.children.forEach {
-               val newPost = ForumPosts(it.child("postAuthor").value.toString(),it.child("postContent").value.toString())
-                add(newPost)
+                val Autor = it.child("postAuthor").value.toString()
+                val Content = it.child("postContent").value.toString()
+                val newPost = ForumPosts("$Autor","$Content")
+                add(0,newPost)
                 Log.i("firebase", "${it.child("postContent").value}")
 
             }
