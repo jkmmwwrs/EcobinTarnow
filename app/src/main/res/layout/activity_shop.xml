@@ -31,7 +31,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="133dp" />
+                android:layout_height="100dp" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -43,23 +43,34 @@
                     android:gravity="center">
 
                     <LinearLayout
-                        android:layout_width="220dp"
+                        android:layout_width="320dp"
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
-                        android:background="@color/darkblue"
-                        android:orientation="horizontal">
+                        android:background="@drawable/bobux"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:textSize="25sp"
+                            android:layout_marginRight="35dp"
+                            android:text="Opcja 1\n2000 punktów"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/granat" />
+
 
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.AppCompatButton
-
-                        android:id="@+id/option1"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
-                        android:background="@color/darkerblue"
-                        android:text=""
-                        android:textColor="@color/white" />
                 </TableRow>
 
                 <TableRow
@@ -71,20 +82,28 @@
                         android:layout_width="220dp"
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
-                        android:background="@color/darkblue"
-                        android:orientation="horizontal">
-
+                        android:background="@drawable/vbux"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bialy_gosc" />
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:gravity="right"
+                            android:layout_marginLeft="35dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:textSize="25sp"
+                            android:text="Opcja 2\n2500 punktów"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.AppCompatButton
-
-                        android:id="@+id/option2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
-                        android:background="@color/darkerblue"
-                        android:text=""
-                        android:textColor="@color/white" />
                 </TableRow>
 
                 <TableRow
@@ -96,20 +115,27 @@
                         android:layout_width="220dp"
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
-                        android:background="@color/darkblue"
-                        android:orientation="horizontal">
-
+                        android:background="@drawable/bobux"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:layout_marginRight="35dp"
+                            android:textSize="25sp"
+                            android:text="Opcja 3\n3000 punktów"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/granat" />
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.AppCompatButton
-
-                        android:id="@+id/option3"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
-                        android:background="@color/darkerblue"
-                        android:text=""
-                        android:textColor="@color/white" />
                 </TableRow>
 
                 <TableRow
@@ -121,20 +147,28 @@
                         android:layout_width="220dp"
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
-                        android:background="@color/darkblue"
-                        android:orientation="horizontal">
-
+                        android:background="@drawable/vbux"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/bialy_gosc" />
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:gravity="right"
+                            android:layout_marginLeft="35dp"
+                            android:textSize="25sp"
+                            android:text="Opcja 4\n5000 punktów"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.AppCompatButton
-
-                        android:id="@+id/option4"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
-                        android:background="@color/darkerblue"
-                        android:text=""
-                        android:textColor="@color/white" />
                 </TableRow>
 
                 <TableRow
@@ -146,20 +180,27 @@
                         android:layout_width="220dp"
                         android:layout_height="100dp"
                         android:layout_margin="5dp"
-                        android:background="@color/darkblue"
-                        android:orientation="horizontal">
-
+                        android:background="@drawable/bobux"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:layout_marginRight="35dp"
+                            android:textSize="25sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="Opcja 5\n7500 punktów" />
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="0"
+                            app:srcCompat="@drawable/granat" />
                     </LinearLayout>
 
-                    <androidx.appcompat.widget.AppCompatButton
-
-                        android:id="@+id/option5"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="5dp"
-                        android:background="@color/darkerblue"
-                        android:text=""
-                        android:textColor="@color/white" />
                 </TableRow>
             </TableLayout>
 
@@ -168,8 +209,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@drawable/gora"
+        android:layout_height="90dp"
+        android:background="@drawable/gora2"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         >
@@ -181,7 +222,6 @@
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:background="@drawable/logoeb"
             android:orientation="vertical">
 
         </LinearLayout>
@@ -197,7 +237,7 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textColor="@color/ecogreen"
-            android:textSize="70sp" />
+            android:textSize="60sp" />
 
         <Space
             android:layout_width="wrap_content"
@@ -229,8 +269,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:background="@drawable/do_ikon"
+                android:layout_height="90dp"
+                android:background="@drawable/dol2"
                 android:gravity="bottom"
                 android:orientation="vertical">
 
@@ -244,31 +284,31 @@
                         android:layout_height="wrap_content" />
 
                     <LinearLayout
-                        android:layout_width="60dp"
-                        android:layout_height="70dp"
+                        android:layout_width="70dp"
+                        android:layout_height="85dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatButton
 
                             android:id="@+id/buttonmap"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
                             android:background="@drawable/mapa_ikona_"
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="50dp"
-                        android:layout_height="70dp"
+                        android:layout_width="60dp"
+                        android:layout_height="85dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatButton
 
                             android:id="@+id/buttonforum"
-                            android:layout_width="45dp"
+                            android:layout_width="40dp"
                             android:layout_height="50dp"
                             android:background="@drawable/forum"
                             android:text=""
@@ -276,36 +316,27 @@
                     </LinearLayout>
 
 
-                    <Space
-                        android:layout_width="27dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0" />
-
                     <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="80dp"
+                        android:layout_height="85dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatButton
 
                             android:id="@+id/button2"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:background="@drawable/kodqr"
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
 
 
-                    <Space
-                        android:layout_width="23dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0" />
 
                     <LinearLayout
-                        android:layout_width="60dp"
-                        android:layout_height="70dp"
+                        android:layout_width="70dp"
+                        android:layout_height="85dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -313,28 +344,42 @@
 
                             android:id="@+id/buttonshop"
                             android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_height="45dp"
                             android:background="@drawable/sklepiczek"
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="55dp"
-                        android:layout_height="70dp"
+                        android:layout_width="50dp"
+                        android:layout_height="85dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatButton
 
                             android:id="@+id/button"
-                            android:layout_width="35dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/konto_ikona_eb"
+                            android:layout_width="30dp"
+                            android:layout_height="45dp"
+                            android:background="@drawable/wyjscie"
                             android:text=""
                             android:textColor="@color/white" />
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="85dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:id="@+id/buttonsearch"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/lupa"
+                            android:text=""
+                            android:textColor="@color/white" />
+                    </LinearLayout>
 
                     <Space
                         android:layout_width="20dp"
