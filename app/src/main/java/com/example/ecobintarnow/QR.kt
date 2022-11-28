@@ -70,7 +70,7 @@ class QR : AppCompatActivity() {
                 val email = auth.currentUser?.email.toString()
                 val kodZ = it.text.toString()
 
-                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(kodZ[7].digitToInt())
+                val points = intent.getStringExtra("PKT_DATA")?.toInt()?.plus(kodZ[7].digitToInt()*5)
 
 
 

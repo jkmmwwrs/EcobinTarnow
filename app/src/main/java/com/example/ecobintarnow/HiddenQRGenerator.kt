@@ -36,7 +36,7 @@ class HiddenQRGenerator: AppCompatActivity()
 
 
         btnGenerateQRCode.setOnClickListener{
-            val text1 = (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (1..9).random().toString()
+            val text1 = (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (0..9).random().toString() + (1..4).random().toString()
 
             btnGenerateQRCode.text = text1
 

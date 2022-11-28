@@ -35,6 +35,7 @@ class SecondActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
     private lateinit var lastLocation: Location
     private lateinit var fusedLocationClient : FusedLocationProviderClient
     val mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+    val xDatabase = FirebaseDatabase.getInstance().getReference("Bins");
 
     companion object{
         private const val LOCATION_REQUEST_CODE = 1
@@ -132,10 +133,65 @@ class SecondActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
         }
     }
     private fun placeMarkerOnMap(currentLatLong: LatLng){
-        val zsme = LatLng(50.015327417015165, 20.975568497898742)
-        val hackathon = LatLng(50.02369639278428, 20.98445644395501)
-        mMap.addMarker(MarkerOptions().position(zsme).title("ZSME"))
-        mMap.addMarker(MarkerOptions().position(hackathon).title("Hackathon"))
+
+        xDatabase.child("ID001").get().addOnSuccessListener {
+            val zsme_lat = it.child("lat").value.toString()
+            val zsme_long = it.child("long").value.toString()
+
+            val zsme = LatLng(zsme_lat.toDouble(), zsme_long.toDouble())
+
+            mMap.addMarker(MarkerOptions().position(zsme).title("ZSME"))
+        }
+
+        xDatabase.child("ID002").get().addOnSuccessListener {
+            val hackathon_lat = it.child("lat").value.toString()
+            val hackathon_long = it.child("long").value.toString()
+
+            val hackathon = LatLng(hackathon_lat.toDouble(), hackathon_long.toDouble())
+
+
+            mMap.addMarker(MarkerOptions().position(hackathon).title("HACKATHON"))
+        }
+
+        xDatabase.child("ID003").get().addOnSuccessListener {
+            val zst_lat = it.child("lat").value.toString()
+            val zst_long = it.child("long").value.toString()
+
+            val zst = LatLng(zst_lat.toDouble(), zst_long.toDouble())
+
+
+            mMap.addMarker(MarkerOptions().position(zst).title("ZST"))
+        }
+
+        xDatabase.child("ID004").get().addOnSuccessListener {
+            val tarnovia_lat = it.child("lat").value.toString()
+            val tarnovia_long = it.child("long").value.toString()
+
+            val tarnovia = LatLng(tarnovia_lat.toDouble(), tarnovia_long.toDouble())
+
+
+            mMap.addMarker(MarkerOptions().position(tarnovia).title("GALERIA TARNOVIA"))
+        }
+
+        xDatabase.child("ID005").get().addOnSuccessListener {
+            val gemini_lat = it.child("lat").value.toString()
+            val gemini_long = it.child("long").value.toString()
+
+            val gemini = LatLng(gemini_lat.toDouble(), gemini_long.toDouble())
+
+
+            mMap.addMarker(MarkerOptions().position(gemini).title("GALERIA TARNOVIA"))
+        }
+
+        xDatabase.child("ID006").get().addOnSuccessListener {
+            val aero_lat = it.child("lat").value.toString()
+            val aero_long = it.child("long").value.toString()
+
+            val aero = LatLng(aero_lat.toDouble(), aero_long.toDouble())
+
+
+            mMap.addMarker(MarkerOptions().position(aero).title("AEROKLUB"))
+        }
     }
     override fun onMarkerClick(p0: Marker)= false
 

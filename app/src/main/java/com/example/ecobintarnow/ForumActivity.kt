@@ -36,12 +36,6 @@ class ForumActivity : AppCompatActivity() {
         postListArray = arrayListOf<ForumPosts>()
         getPostData()
 
-        //auth = Firebase.auth
-
-//        val adapter = ForumAdapter(getPosts())
-//        binding.forumRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
-//        binding.forumRecyclerView.adapter = adapter
-
         auth = Firebase.auth
 
         binding.showbutton.setOnClickListener {
@@ -94,32 +88,6 @@ class ForumActivity : AppCompatActivity() {
           })
 
       }
-//    private fun getPosts(): List<ForumPosts> = buildList {
-//
-//        for (i in 0..5)
-//        {
-//            val pAuthor = mDatabase.get().result.children.elementAt(i).child("postAuthor").value
-//            val pContent = mDatabase.get().result.children.elementAt(i).child("postContent").value
-//            var newPost = ForumPosts(pAuthor.toString(),pContent.toString())
-//            add(newPost)
-//        }
 
-//        mDatabase.get().addOnSuccessListener { it ->
-//            it.children.forEach {
-//
-//               val newPost = ForumPosts(it.child("postAuthor").value.toString(),it.child("postContent").value.toString())
-//                add(newPost)
-//                Log.i("firebase", "${it.key}")
-//
-//            }
-//        }.addOnFailureListener{
-//            Log.e("firebase", "Error getting data", it)
-//        }
-
-//        for (i in 0..5) {
-//            val newPost = ForumPosts("$i", "$i")
-//            add(newPost)
-//        }
-//    }
 }
 
