@@ -62,6 +62,7 @@ class ForumActivity : AppCompatActivity() {
                 )
                 mDatabase.child(System.currentTimeMillis().toString()).setValue(postData)
                 binding.forumEditText.text = null
+                binding.forumEditTextTopic.text = null
                 binding.forumEditText.visibility = View.GONE
                 binding.forumEditTextTopic.visibility = View.GONE
                 binding.forumButton.visibility = View.GONE
