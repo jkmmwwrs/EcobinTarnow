@@ -45,6 +45,7 @@
 
 
         </com.budiyev.android.codescanner.CodeScannerView>
+
     </FrameLayout>
 
 <!--    <TextView-->

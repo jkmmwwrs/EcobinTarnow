@@ -3,6 +3,7 @@ package com.example.ecobintarnow
 import com.example.ecobintarnow.databinding.ActivityForumBinding
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,14 +41,12 @@ class ForumActivity : AppCompatActivity() {
 //        binding.forumRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
 //        binding.forumRecyclerView.adapter = adapter
 
+        auth = Firebase.auth
 
         binding.forumButton.setOnClickListener {
 
-            val currentTimestamp = System.currentTimeMillis()
-            val postContent = binding.forumEditText.text.toString()
-            val postAuthor = auth.currentUser?.email.toString()
-            val postData = ForumPosts(postAuthor, postContent)
-            mDatabase.child(currentTimestamp.toString()).setValue(postData)
+            val postData = ForumPosts(auth.currentUser?.email.toString(), binding.forumEditText.text.toString())
+            mDatabase.child(System.currentTimeMillis().toString()).setValue(postData)
         }
     }
 
