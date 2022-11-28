@@ -132,10 +132,6 @@ class SecondActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMark
         }
     }
     private fun placeMarkerOnMap(currentLatLong: LatLng){
-//        val markerOptions = MarkerOptions().position(currentLatLong)
-//        markerOptions.title("Tu jesteś!")
-//        mMap.addMarker(markerOptions)
-
         val zsme = LatLng(50.015327417015165, 20.975568497898742)
         val hackathon = LatLng(50.02369639278428, 20.98445644395501)
         mMap.addMarker(MarkerOptions().position(zsme).title("ZSME"))
