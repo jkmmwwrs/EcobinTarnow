@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/gray">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,22 +27,41 @@
             android:orientation="vertical"
             android:background="@drawable/postbox"
             android:visibility="visible">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/showbutton"
-                android:layout_marginTop="10dp"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/plus"
-                android:text=""
-                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/showbutton"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/plus"
+                    android:text=""
+                    android:visibility="visible" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/returnbutton"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="185dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/zawrot"
+                    android:text=""
+                    android:visibility="visible" />
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/forumEditTextTopic"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
                 android:hint="Temat"
                 android:textColorHint="@color/white2"
                 android:textColor="@color/white"
@@ -51,6 +71,7 @@
                 android:id="@+id/forumEditText"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
                 android:hint="Napisz post"
                 android:textColorHint="@color/white2"
                 android:textColor="@color/white"

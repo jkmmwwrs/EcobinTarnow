@@ -1,5 +1,6 @@
 package com.example.ecobintarnow
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import com.example.ecobintarnow.databinding.ActivityForumBinding
 import android.os.Bundle
@@ -44,10 +45,16 @@ class ForumActivity : AppCompatActivity() {
             binding.forumEditTextTopic.visibility = View.VISIBLE
             binding.forumButton.visibility = View.VISIBLE
             binding.showbutton.visibility = View.GONE
+            binding.returnbutton.visibility = View.GONE
+        }
+
+        binding.returnbutton.setOnClickListener {
+            val returnIntent = Intent(applicationContext, SecondActivity::class.java)
+            startActivity(returnIntent)
         }
 
         binding.forumButton.setOnClickListener {
-            if(binding.forumEditText.text != null) {
+            if(binding.forumEditText.text.isNotEmpty() && binding.forumEditTextTopic.text.isNotEmpty()) {
                 val postData = ForumPosts(
                     auth.currentUser?.email.toString(),
                     binding.forumEditText.text.toString(),
@@ -59,6 +66,7 @@ class ForumActivity : AppCompatActivity() {
                 binding.forumEditTextTopic.visibility = View.GONE
                 binding.forumButton.visibility = View.GONE
                 binding.showbutton.visibility = View.VISIBLE
+                binding.returnbutton.visibility = View.VISIBLE
             }
             else
             {
